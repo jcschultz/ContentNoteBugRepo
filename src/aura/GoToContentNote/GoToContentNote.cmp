@@ -1,6 +1,7 @@
 <aura:component controller="CNController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
     
     <div>
+        <!-- this is just a standard button that calls a controller method when clicked -->
         <lightning:button label="Create a Note and Go To It" onclick="{!c.doNoteCreation}" />
     </div>
     
