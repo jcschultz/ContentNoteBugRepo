@@ -19,4 +19,24 @@
         
         $A.enqueueAction(action);
     },
+    
+    doNoteHome : function(component, event, helper) {
+        // createNote is the apex controller method that will be called.
+        var action = component.get('c.createNote');
+        
+        action.setCallback(this, function(response){
+            // after the apex controller method returns a ContentNote record id,
+            // but in this case we're just going to home to the ContentNote home page.
+            var newNoteEvent = $A.get('e.force:navigateToObjectHome');
+            
+            // here we're supplying the event with the record id of the newly created note.
+            newNoteEvent.setParams({
+                scope : 'ContentNote'
+            });
+            
+            newNoteEvent.fire();
+        });
+        
+        $A.enqueueAction(action);
+    },
 })

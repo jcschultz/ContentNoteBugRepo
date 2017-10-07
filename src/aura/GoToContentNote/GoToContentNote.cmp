@@ -4,6 +4,11 @@
         <!-- this is just a standard button that calls a controller method when clicked -->
         <lightning:button label="Create a Note and Go To It" onclick="{!c.doNoteCreation}" />
     </div>
+
+    <div>
+        <!-- this is just a standard button that calls a controller method when clicked -->
+        <lightning:button label="Create a Note and Go To Notes Home" onclick="{!c.doNoteHome}" />
+    </div>
     
 
 </aura:component>
